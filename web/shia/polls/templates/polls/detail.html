@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load pools_extras %}
+
+{% block breadcrumb-page %}{{ poll.question }}{% endblock breadcrumb-page %}
+
+{% block content %}
+    {{ poll.id|checknum }}
+    <h1>{{ poll.question }}</h1>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="{% url 'polls:vote' poll.id %}" method="post" class="form-horizontal">
+    {% csrf_token %}
+    {% for choice in poll.choice_set.all %}
+         <div class="control-group">
+            <label class="control-label" for="choice{{ forloop.counter }}"><img style="max-height: 50px;" src="{{ choice.choice_text }}" /></label>
+             <div class="controls">
+                 <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+             </div>
+        </div>
+    {% endfor %}
+    <div class="control-group">
+        <div class="controls">
+            <input type="submit" value="Vote" />
+        </div>
+    </div>
+    </form>
+{% endblock content %}

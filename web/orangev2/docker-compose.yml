@@ -1,0 +1,5 @@
+orange:
+    build: .
+    ports:
+        - "9999:9999"
+    restart: always

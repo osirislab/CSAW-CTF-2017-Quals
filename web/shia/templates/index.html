@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block breadcrumbs %}
+{% endblock breadcrumbs %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="box">
+
+<div class="hero-unit">
+  <h1>Shia Labeouf-off!</h1>
+  <p>Find your favorite Shia Labeouf Gif!</p>
+  <p>Do a Shia Labeouf ad lib!</p>
+  <p>
+    <a class="btn btn-primary btn-large" href='{% url 'polls:index' %}'>Pick ur Shia!</a>
+  </p>
+</div>
+
+     <!-- Example row of columns -->
+      <div class="row">
+        <div class="span5">
+          <p><img src='https://media1.giphy.com/media/xT5LMvK0kjdURtXa48/200.webp#38-grid3' /></p>
+        </div>
+        <div class="span5">
+          <p><img src='https://media1.giphy.com/media/GcSqyYa2aF8dy/giphy.gif' /></p>
+        </div>
+      </div>
+
+        </div>
+    </div>
+</div>
+{% endblock body %}

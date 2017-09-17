@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb-page %}Ad Lib{% endblock breadcrumb-page %}
+
+{% block content %}
+
+<p>Give me an ad lib and I will Shia Labeouf it up for you!<p>
+<p>Where you want a noun, just put: "{% templatetag openvariable %} noun {% templatetag closevariable %}", for a verb: "{% templatetag openvariable %} verb {% templatetag closevariable %}", and for an adjective: "{% templatetag openvariable %} adjective {% templatetag closevariable %}"!</p>
+
+<textarea name="formatdata" form="formatform"></textarea>
+<form id="formatform" method="POST">
+  {% csrf_token %}
+  <input type="submit">
+</form>
+
+{% endblock content %}

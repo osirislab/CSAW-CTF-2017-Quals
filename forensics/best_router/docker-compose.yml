@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  best_router:
+    build: .
+    restart: always
+    ports:
+      - "8000:80"

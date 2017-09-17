@@ -1,0 +1,10 @@
+Building:
+docker build . -t minesweeper
+
+Running:
+docker run --rm -p 31337:31337 -it minesweeper
+
+Copying binary:
+docker cp `docker ps | grep minesweeper | tr -s  ' ' | cut -d ' ' -f 1`:/app/minesweeper .
+
+Send the binary to the participants. They will need it to exploit the binary

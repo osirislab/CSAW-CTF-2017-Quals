@@ -1,0 +1,1 @@
+AppJailLauncher.exe /outbound /port:4141 /timeout:30 firewall.exe

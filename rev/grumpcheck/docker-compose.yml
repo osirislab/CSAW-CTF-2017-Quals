@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  grumpcheck:
+    build: .
+    restart: always
+    ports:
+      - "7890:7890"
