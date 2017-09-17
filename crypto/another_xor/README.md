@@ -7,7 +7,7 @@ Challengers will be given the cipher:
 
 plaintext:
 flag                                  key                                                                hash(flag+key)
-flag{sti11_us3_da_x0r_for_my_s3cratz}|A great secret is super encrypted so that nobody sees it wink wink|d5111350bbbe105121b9a9496ac08df2
+flag{sti11_us3_da_x0r_for_my_s3cratz}|A quart jar of oil mixed with zinc oxide makes a very bright paint|d5111350bbbe105121b9a9496ac08df2
 
 The key is repeated to be able to encrypt the plaintext.
 
